@@ -1,36 +1,37 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import VantaFog from "../components/VantaFog";
+import CustomCursor from "../components/CustomCursor";
+import NavbarHome from "../components/NavbarHome";
+
+import "../styles/Home.css";
 
 export default function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className="homePage">
+      <VantaFog />
+      <CustomCursor />
+      <NavbarHome />
+      <div className="background-animation">
+        <div className="noise-layer" />
+        <div className="blur-layer" />
+      </div>
+      <div className="Home">
+        <div className="homeTitleContainer">
+          <div className="line-1">Hi,</div>
+          <div className="line-2">my name</div>
+          <div className="line-3">
+            is <span className="antoine">Antoine</span>
+          </div>
+          <div className="line-4-desktop">
+            UI/UX DESIGNER &nbsp; ◆ ◆ &nbsp; CREATIVE DEVELOPER &nbsp; ◆ ◆
+            &nbsp; WEB DEVELOPER
+          </div>
+          <div className="line-4-mobile">
+            <p>
+              UI/UX DESIGNER • CREATIVE DEVELOPER • WEB DEVELOPER <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
